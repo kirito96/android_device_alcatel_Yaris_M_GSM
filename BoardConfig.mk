@@ -31,7 +31,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/alcatel/4032a/bootimg.mk
 
-BOARD_CUSTOM_MKBOOTIMG := $(HOST_OUT_EXECUTABLES)/mtkbootimg$(HOST_EXECUTABLE_SUFFIX)
+BOARD_CUSTOM_MKBOOTIMG := mtkbootimg
 TARGET_RECOVERY_INITRC := device/alcatel/4032a/recovery/init.rc
 TARGET_RECOVERY_FSTAB := device/alcatel/4032a/recovery/recovery.fstab
 
