@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/alcatel/4032a/BoardConfigVendor.mk
+-include vendor/alcatel/Yaris_M_GSM/BoardConfigVendor.mk
 
 # Architecture
 TARGET_ARCH := arm
@@ -14,25 +14,22 @@ TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_BOOTLOADER_BOARD_NAME := 4032a
+TARGET_BOOTLOADER_BOARD_NAME := Yaris_M_GSM
 
 BOARD_KERNEL_CMDLINE := 
-TARGET_PREBUILT_KERNEL := device/alcatel/4032a/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/alcatel/Yaris_M_GSM/prebuilt/kernel
 BOARD_MKBOOTIMG_ARGS := --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --board 1429947554 --mtk 1
 
 # Partitions
-
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520
-
 
 BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := device/alcatel/4032a/bootimg.mk
-
+BOARD_CUSTOM_BOOTIMG_MK := device/alcatel/Yaris_M_GSM/bootimg.mk
 BOARD_CUSTOM_MKBOOTIMG := mtkbootimg
-TARGET_RECOVERY_FSTAB := device/alcatel/4032a/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/alcatel/Yaris_M_GSM/recovery/recovery.fstab
 
 RECOVERY_VARIANT := twrp
 
@@ -49,3 +46,4 @@ DEVICE_RESOLUTION := 480x800
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_NO_REBOOT_BOOTLOADER := true

@@ -22,6 +22,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),4032a)
+ifeq ($(TARGET_DEVICE),Yaris_M_GSM)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
